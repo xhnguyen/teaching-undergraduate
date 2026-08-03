@@ -1,0 +1,252 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath, amsfonts, amsthm, hyperref, longtable, array}
+\usepackage[margin=1in]{geometry}
+
+%% ---------------------------------------------------------------
+%% MATH 3850, Fall 2026 -- Syllabus
+%% Adapted from D. Herzog's Fall 2025 syllabus (../herzog_f25/).
+%%
+%% TODO before distributing: fill in the six \TBD items below.
+%% Schedule version: A (with Bessel functions and spherical harmonics).
+%% To switch to Version B, replace the last five rows of the schedule
+%% table as indicated by the comment near the end of this file.
+%% ---------------------------------------------------------------
+
+\newcommand{\TBD}{\textbf{[TBD]}}
+
+\title{Mathematics 3850 (Fall 2026):\\ Introduction to Partial Differential Equations}
+
+\begin{document}
+\maketitle
+
+\begin{raggedright}
+
+\textbf{Instructor}: Xuan Hien Nguyen.
+
+\textbf{Office}: Carver Hall \TBD.
+
+\textbf{Email}: xhnguyen@iastate.edu.
+
+\textbf{Text}: \emph{Applied Partial Differential Equations with Fourier Series and
+Boundary Value Problems}, 6th edition, by Richard Haberman.  This text is
+\emph{recommended}, not required.  Earlier editions (4th or 5th) are perfectly
+adequate: no assignment, quiz, or exam in this course refers to the book by page or
+problem number, so any edition will serve.  Used copies of earlier editions are
+inexpensive, and a copy will be placed on reserve at Parks Library.
+
+\textbf{Free supplement}: \emph{Applied Partial Differential Equations}, 3rd edition,
+by J.\ David Logan (Springer, 2015).  This book is available to you at no cost through
+the ISU Library's SpringerLink subscription:
+\url{https://link.springer.com/book/10.1007/978-3-319-12493-3}.  Logan's Chapter 1 is
+an unusually good account of \emph{where} the equations of this course come from, and
+optional readings from it are listed on the schedule.  You are graded only on material
+from Haberman and from class.
+
+\textbf{Course Webpage}: Canvas.
+
+\textbf{Class Meetings}: TR \TBD\ in \TBD.
+
+\textbf{Office Hours}: \TBD.
+
+\vspace{0.1in}
+
+\textbf{Course Topics}: Method of separation of variables for linear partial
+differential equations, including the heat equation, Poisson equation, and wave
+equation.  Topics from Fourier series, Sturm--Liouville theory, Bessel functions,
+spherical harmonics, and the method of characteristics.
+
+\vspace{0.1in}
+
+\textbf{Learning Objectives}: This class introduces students to the theory and
+solution of partial differential equations.  By the end of the course you should be
+able to derive the classical equations of mathematical physics from conservation
+principles, solve boundary value problems by separation of variables, expand functions
+in Fourier and generalized Fourier series, analyze Sturm--Liouville eigenvalue
+problems, and apply the method of characteristics.
+
+\vspace{0.1in}
+
+\textbf{Course Structure}: There are three components: \emph{Participation},
+\emph{Homework} and \emph{Exams}.
+
+\vspace{0.1in}
+
+(1) \emph{Participation}: Attendance will not be taken.  However, regular attendance
+and participation are essential to success in this course.  If you are ill or have a
+reason you cannot attend, please let me know by email before that class.  If I notice
+attendance is significantly low, I reserve the right to administer an attendance quiz,
+worth the same as a typical homework quiz.
+
+\vspace{0.1in}
+
+(2) \emph{Homework}: Homework will be assigned regularly through Canvas.  Homework will
+NOT be collected or graded.  Instead, there will be weekly quizzes testing your
+knowledge of the homework.  Each quiz will be $2$--$3$ problems long, and these
+problems will come directly from the homework.  Quizzes will last no more than $15$
+minutes and will be given at the beginning of class, so do not be late.  There will be
+NO make-up quizzes except in very special circumstances, according to Iowa State's
+policy on missed work.  \textbf{The two lowest quiz scores will be dropped.}
+
+\vspace{0.1in}
+
+(3) \emph{Exams}: There will be three examinations: two midterms and a final.
+Midterm 1 will be given in class on \textbf{Thursday, October 1}.  Midterm 2 will be
+given in class on \textbf{Thursday, November 12}.  The final exam is comprehensive and
+will be held during finals week (December 14--17) at the time set by the university's
+final exam schedule.
+
+\vspace{0.1in}
+
+\textbf{Student Evaluation}: On every quiz and exam you will receive a numerical score,
+e.g.\ 19/21.  Clarity of exposition is part of a correct solution: an answer that
+cannot be followed will not receive full credit.  Numerical scores convert to a course
+total according to the following weights:
+\begin{itemize}
+\item quizzes are worth 30\% of the final course grade;
+\item each midterm is worth 20\% of the final course grade;
+\item the final exam is worth 30\% of the final course grade.
+\end{itemize}
+I will do my best to be objective and fair, and partial credit will be awarded where
+warranted.  Letter grades are calculated on the following scale.  If $x$ is your total
+percent score for the course and
+\begin{itemize}
+\item $90\%\leq x \leq 100\%$, then you will receive an $A$;
+\item $80\%\leq x < 90\%$, then you will receive a $B$;
+\item $70\% \leq x < 80\%$, then you will receive a $C$;
+\item $60\% \leq x < 70\%$, then you will receive a $D$;
+\item $x < 60\%$, then you will receive an $F$.
+\end{itemize}
+Borderline grades are handled case by case.  Attendance and regular participation
+usually factor into such decisions favorably; regular absences do not.
+
+\vspace{0.1in}
+
+\textbf{Student Expectations}: Office hours are not make-up classes; they are for
+students needing help beyond class.  Make-up midterm or final examinations will be
+given only in very special cases, according to Iowa State's policy on missed work.
+
+\vspace{0.1in}
+
+Students will be respectful of the classroom environment.  Cell phones are permitted in
+class, but if they become a burden I reserve the right to change this policy.
+
+\newpage
+
+\textbf{Course Schedule}
+
+\vspace{0.05in}
+
+Section numbers refer to Haberman.  Optional Logan readings are free through
+SpringerLink.  This schedule is a plan, not a contract; changes will be announced in
+class and on Canvas.
+
+\vspace{0.1in}
+
+\begin{longtable}{@{}l l >{\raggedright\arraybackslash}p{2.9in} >{\raggedright\arraybackslash}p{1.35in}@{}}
+\hline
+\textbf{Wk} & \textbf{Date} & \textbf{Topic} & \textbf{Due / Notes} \\
+\hline
+\endhead
+1  & Aug 25 & \S1.1--1.2 Derivation of the heat equation & Logan \S1.1--1.2 \\
+   & Aug 27 & \S1.3 Boundary conditions & Logan \S1.3--1.4 \\
+\hline
+2  & Sep 1  & \S1.4 Equilibrium temperatures; \S1.5 higher dimensions & Logan \S1.7--1.8 \\
+   & Sep 3  & \S2.1--2.3 Linearity; separation of variables & \\
+\hline
+3  & Sep 8  & \S2.3 Eigenvalues; orthogonality of sines & \textbf{HW1 due; Quiz 1} \\
+   & Sep 10 & \S2.3 Heat equation with zero ends & \\
+\hline
+4  & Sep 15 & \S2.4 Insulated ends; thin circular ring & \textbf{HW2 due; Quiz 2} \\
+   & Sep 17 & \S2.5.1 Laplace's equation in a rectangle & \\
+\hline
+5  & Sep 22 & \S2.5.2--2.5.4 Laplace in a disk; maximum principle & \textbf{HW3 due; Quiz 3} \\
+   & Sep 24 & \S3.1--3.2 Fourier series; convergence theorem & \\
+\hline
+6  & Sep 29 & \S3.3 Sine and cosine series; exam review & \textbf{HW4 due} (no quiz) \\
+   & Oct 1  & \textbf{MIDTERM 1} (Ch.\ 1--2, \S3.1--3.3) & \\
+\hline
+7  & Oct 6  & \S3.3--3.4 Term-by-term differentiation & \\
+   & Oct 8  & \S3.5--3.6 Integration; complex form & \\
+\hline
+8  & Oct 13 & \S4.2--4.3 The vibrating string & \textbf{HW5 due; Quiz 4} \\
+   & Oct 15 & \S4.4 Fixed ends; normal modes & \\
+\hline
+9  & Oct 20 & \S4.5 Vibrating membrane & \textbf{HW6 due; Quiz 5} \\
+   & Oct 22 & \S12.2--12.3 Method of characteristics & Logan \S2.2 \\
+\hline
+10 & Oct 27 & \S12.3--12.4 d'Alembert's solution; reflections & \textbf{HW7 due; Quiz 6} \\
+   & Oct 29 & \S5.1--5.3 Sturm--Liouville problems & Logan \S4.2 \\
+\hline
+11 & Nov 3  & \S5.4--5.5 Self-adjoint operators & \textbf{HW8 due; Quiz 7} \\
+   & Nov 5  & \S5.6 Rayleigh quotient & \\
+\hline
+12 & Nov 10 & \S5.8 Third-kind boundary conditions; exam review & \textbf{HW9 due; Quiz 8} \\
+   & Nov 12 & \textbf{MIDTERM 2} (Ch.\ 3, 4, 12, 5) & \\
+\hline
+13 & Nov 17 & \S7.2--7.3 Rectangular membrane & \\
+   & Nov 19 & \S7.4--7.5 Multidimensional eigenvalue problems & \\
+\hline
+14 & Nov 24 & \textit{Thanksgiving Break --- no class} & \\
+   & Nov 26 & \textit{Thanksgiving Break --- no class} & \\
+\hline
+%% ---- VERSION A (below): Bessel functions and spherical harmonics ----
+%% For VERSION B, replace the four content rows below with:
+%%   Dec 1  & \S8.2--8.3 Nonhomogeneous problems; eigenfunction expansion
+%%   Dec 3  & \S8.4--8.5 Time-dependent BCs; forced vibrations
+%%   Dec 8  & \S8.6 Poisson's equation
+%%   Dec 10 & Comprehensive final review
+15 & Dec 1  & \S7.7 Circular membrane; Bessel's equation & \textbf{HW10 due; Quiz 9} \\
+   & Dec 3  & \S7.7--7.8 Bessel functions and orthogonality & \\
+\hline
+16 & Dec 8  & \S7.10 Laplace in a sphere; Legendre polynomials & \textit{Prep Week} \\
+   & Dec 10 & Spherical harmonics; comprehensive review & \textit{Prep Week} \\
+\hline
+   & Dec 14--17 & \textbf{FINAL EXAM} (comprehensive), time per registrar & \\
+\hline
+\end{longtable}
+
+\vspace{0.1in}
+
+Homework 11 will be posted on December 1 as final exam preparation.  Consistent with
+Iowa State's Prep Week policy, it will not be collected and there will be no quiz
+during Prep Week.
+
+\newpage
+
+\textbf{University Policies}
+
+\vspace{0.1in}
+
+\textbf{Free expression}: Iowa State University supports and upholds the First Amendment protection of freedom of speech and the principle of academic freedom in order to foster a learning environment where open inquiry and the vigorous debate of a diversity of ideas are encouraged. Students will not be penalized for the content or viewpoints of their speech as long as student expression in a class context is germane to the subject matter of the class and conveyed in an appropriate manner.
+
+\vspace{0.1in}
+
+No employee, student, applicant, or campus visitor is compelled to disclose their pronouns. Anyone may voluntarily disclose their own pronouns.
+
+\vspace{0.1in}
+
+\textbf{Academic dishonesty}: The class will follow Iowa State University's policy on academic misconduct (5.1 in the Student Code of Conduct). Students are responsible for adhering to university policy and the expectations in the course syllabus and on coursework and exams and for following directions given by faculty, instructors, and ISU Test Center regulations related to coursework, assessments, and exams. Anyone suspected of academic misconduct will be reported to the Office of Student Conduct in the Dean of Students Office. Information about academic integrity and the value of completing academic work honestly can be found in the Iowa State University Academic Integrity Tutorial.
+
+\vspace{0.1in}
+
+\textbf{Accessibility statement}: Iowa State University is committed to supporting students with disabilities. Promoting these values entails providing reasonable accommodations where barriers exist to students' full participation in higher education. Students in need of accommodations or who experience accessibility-related barriers to learning should work with Student Accessibility Services (SAS) to identify resources and support available to them. Staff at SAS collaborate with students and campus partners to coordinate accommodations and to further the academic excellence of students with disabilities. Information about SAS is available online at www.sas.dso.iastate.edu, by email at accessibility@iastate.edu, or by phone at 515-294-7220.
+
+\vspace{0.1in}
+
+\textbf{Non-discrimination statement}: Iowa State University does not discriminate on the basis of race, color, age, ethnicity, religion, national origin, pregnancy, sexual orientation, genetic information, sex, marital status, disability, or status as a U.S. Veteran. Inquiries regarding non-discrimination policies may be directed to Office of Equal Opportunity, 2680 Beardshear Hall, 515 Morrill Road, Ames, Iowa 50011, Tel. 515-294-7612, email eooffice@iastate.edu.
+
+\vspace{0.1in}
+
+\textbf{Mental health and well-being resources}: We're committed to your success and wellbeing at Iowa State. As a Cyclone, you can access 24/7 resources, services, and people dedicated to helping you achieve your goals and be your best in and out of the classroom. Whether you need academic support or just someone to talk to, we're here for you at Cyclone Support (cyclonesupport.iastate.edu). If you are struggling emotionally and need support, there's confidential help available 24/7/365. You can call or text 988 or use the chat at 988lifeline.org.
+
+\vspace{0.1in}
+
+\textbf{Statement on prep week}: This class follows the Iowa State University Prep Week policy, as noted in the ISU Policy Library and the Senior Vice President and Provost's website.
+
+\vspace{0.1in}
+
+\textbf{Religious accommodation}: Iowa State University welcomes a broad spectrum of religious beliefs and practices, recognizing the contributions differing experiences and viewpoints can bring to the community. There may be times when an academic requirement conflicts with religious observances and practices. If that happens, students may request the reasonable accommodation for religious practices. In all cases, you must put your request in writing. The instructor will review the situation in an effort to provide a reasonable accommodation when possible to do so without fundamentally altering a course. For students, you should first discuss the conflict and your requested accommodation with your professor at the earliest possible time. You or your instructor may also seek assistance from the Dean of Students Office at 515-294-1020 or the Office of Equal Opportunity at 515-294-7612.
+
+\end{raggedright}
+
+\end{document}

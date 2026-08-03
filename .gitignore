@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.synctex
+*.synctex\ [0-9]
+*.synctex(busy)
+*.fls
+*.fdb_latexmk
+*.toc
+*.nav
+*.snm
+*.bbl
+*.blg
+
+# Course PDFs: synced via Dropbox, not tracked here
+*.pdf
+
+# Bulky course material: synced via Dropbox, symlinked in by scripts/link-dropbox-pdfs.sh
+math3850/stinga
+math3850/herzog_f25
