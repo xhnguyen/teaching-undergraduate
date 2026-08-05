@@ -1,3 +1,11 @@
+% !TEX program = lualatex
+%% \DocumentMetadata must be the first COMMAND in the file, above
+%% \documentclass.  Comments (like the TeX directive above) may precede it.
+%% It turns on the LaTeX Project's PDF/UA tagging. REQUIRES lualatex and
+%% TeX Live 2024 or newer -- build with:  lualatex m3850_f26.tex  (twice).
+%% Compiling this file with pdflatex, or with TeX Live 2020, will fail here.
+\DocumentMetadata{lang=en-US, pdfversion=2.0, testphase={phase-III,math}}
+
 \documentclass[11pt]{amsart}
 \usepackage{amsmath, amsfonts, amsthm, hyperref, longtable, array}
 \usepackage[margin=1in]{geometry}
@@ -12,6 +20,23 @@
 %% table as indicated by the comment near the end of this file.
 %% ---------------------------------------------------------------
 
+%% Accessibility: document metadata + language, read by screen readers and by
+%% automated checkers. Structural tagging is handled by \DocumentMetadata above.
+\hypersetup{
+  pdftitle={MATH 3850, Fall 2026 -- Syllabus},
+  pdfauthor={Xuan Hien Nguyen},
+  pdfsubject={Course syllabus, Introduction to Partial Differential Equations},
+  pdflang={en-US},
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black
+}
+
+%% Real sectioning with numbers suppressed: gives a tagged, navigable heading
+%% tree and PDF bookmarks, which \textbf pseudo-headings cannot.
+\setcounter{secnumdepth}{0}
+
 \newcommand{\TBD}{\textbf{[TBD]}}
 
 \title{Mathematics 3850 (Fall 2026):\\ Introduction to Partial Differential Equations}
@@ -21,65 +46,68 @@
 
 \begin{raggedright}
 
-\textbf{Instructor}: Xuan Hien Nguyen.
+\section{Course Information}
 
-\textbf{Office}: Carver Hall \TBD.
+\begin{description}
+\item[Instructor] Xuan Hien Nguyen.
+\item[Office] Carver Hall 4780.
+\item[Email] \href{mailto:xhnguyen@iastate.edu}{xhnguyen@iastate.edu}.
+\item[Class Meetings] TR 11:00 AM--12:15 PM in \TBD.
+\item[Office Hours] M 11:30 AM--1:30 PM, R 3:30--4:30 PM, in Carver 4780, and by
+  appointment.
+\item[Course Webpage] Canvas.
+\end{description}
 
-\textbf{Email}: xhnguyen@iastate.edu.
+\section{Texts}
 
-\textbf{Text}: \emph{Applied Partial Differential Equations with Fourier Series and
-Boundary Value Problems}, 6th edition, by Richard Haberman.  This text is
+\textbf{Required text.} \emph{Applied Partial Differential Equations with Fourier
+Series and Boundary Value Problems}, 6th edition, by Richard Haberman.  This text is
 \emph{recommended}, not required.  Earlier editions (4th or 5th) are perfectly
 adequate: no assignment, quiz, or exam in this course refers to the book by page or
 problem number, so any edition will serve.  Used copies of earlier editions are
 inexpensive, and a copy will be placed on reserve at Parks Library.
 
-\textbf{Free supplement}: \emph{Applied Partial Differential Equations}, 3rd edition,
-by J.\ David Logan (Springer, 2015).  This book is available to you at no cost through
-the ISU Library's SpringerLink subscription:
-\url{https://link.springer.com/book/10.1007/978-3-319-12493-3}.  Logan's Chapter 1 is
-an unusually good account of \emph{where} the equations of this course come from, and
-optional readings from it are listed on the schedule.  You are graded only on material
-from Haberman and from class.
+\textbf{Free supplement.} \emph{Applied Partial Differential Equations}, 3rd edition,
+by J.\ David Logan (Springer, 2015), available at no cost through the ISU Library's
+SpringerLink subscription:
+\href{https://link.springer.com/book/10.1007/978-3-319-12493-3}{Logan on SpringerLink}
+(link.springer.com/book/10.1007/978-3-319-12493-3).  Logan's Chapter 1 is an unusually
+good account of \emph{where} the equations of this course come from, and optional
+readings from it are listed on the schedule.  You are graded only on material from
+Haberman and from class.
 
-\textbf{Course Webpage}: Canvas.
+\section{Course Topics}
 
-\textbf{Class Meetings}: TR \TBD\ in \TBD.
-
-\textbf{Office Hours}: \TBD.
-
-\vspace{0.1in}
-
-\textbf{Course Topics}: Method of separation of variables for linear partial
+Method of separation of variables for linear partial
 differential equations, including the heat equation, Poisson equation, and wave
 equation.  Topics from Fourier series, Sturm--Liouville theory, Bessel functions,
 spherical harmonics, and the method of characteristics.
 
-\vspace{0.1in}
+\section{Learning Objectives}
 
-\textbf{Learning Objectives}: This class introduces students to the theory and
+This class introduces students to the theory and
 solution of partial differential equations.  By the end of the course you should be
 able to derive the classical equations of mathematical physics from conservation
 principles, solve boundary value problems by separation of variables, expand functions
 in Fourier and generalized Fourier series, analyze Sturm--Liouville eigenvalue
 problems, and apply the method of characteristics.
 
-\vspace{0.1in}
+\section{Course Structure}
 
-\textbf{Course Structure}: There are three components: \emph{Participation},
+There are three components: \emph{Participation},
 \emph{Homework} and \emph{Exams}.
 
-\vspace{0.1in}
+\subsection{Participation}
 
-(1) \emph{Participation}: Attendance will not be taken.  However, regular attendance
+Attendance will not be taken.  However, regular attendance
 and participation are essential to success in this course.  If you are ill or have a
 reason you cannot attend, please let me know by email before that class.  If I notice
 attendance is significantly low, I reserve the right to administer an attendance quiz,
 worth the same as a typical homework quiz.
 
-\vspace{0.1in}
+\subsection{Homework}
 
-(2) \emph{Homework}: Homework will be assigned regularly through Canvas.  Homework will
+Homework will be assigned regularly through Canvas.  Homework will
 NOT be collected or graded.  Instead, there will be weekly quizzes testing your
 knowledge of the homework.  Each quiz will be $2$--$3$ problems long, and these
 problems will come directly from the homework.  Quizzes will last no more than $15$
@@ -87,17 +115,17 @@ minutes and will be given at the beginning of class, so do not be late.  There w
 NO make-up quizzes except in very special circumstances, according to Iowa State's
 policy on missed work.  \textbf{The two lowest quiz scores will be dropped.}
 
-\vspace{0.1in}
+\subsection{Exams}
 
-(3) \emph{Exams}: There will be three examinations: two midterms and a final.
+There will be three examinations: two midterms and a final.
 Midterm 1 will be given in class on \textbf{Thursday, October 1}.  Midterm 2 will be
 given in class on \textbf{Thursday, November 12}.  The final exam is comprehensive and
 will be held during finals week (December 14--17) at the time set by the university's
 final exam schedule.
 
-\vspace{0.1in}
+\section{Student Evaluation}
 
-\textbf{Student Evaluation}: On every quiz and exam you will receive a numerical score,
+On every quiz and exam you will receive a numerical score,
 e.g.\ 19/21.  Clarity of exposition is part of a correct solution: an answer that
 cannot be followed will not receive full credit.  Numerical scores convert to a course
 total according to the following weights:
@@ -119,9 +147,9 @@ percent score for the course and
 Borderline grades are handled case by case.  Attendance and regular participation
 usually factor into such decisions favorably; regular absences do not.
 
-\vspace{0.1in}
+\section{Student Expectations}
 
-\textbf{Student Expectations}: Office hours are not make-up classes; they are for
+Office hours are not make-up classes; they are for
 students needing help beyond class.  Make-up midterm or final examinations will be
 given only in very special cases, according to Iowa State's policy on missed work.
 
@@ -132,9 +160,7 @@ class, but if they become a burden I reserve the right to change this policy.
 
 \newpage
 
-\textbf{Course Schedule}
-
-\vspace{0.05in}
+\section{Course Schedule}
 
 Section numbers refer to Haberman.  Optional Logan readings are free through
 SpringerLink.  This schedule is a plan, not a contract; changes will be announced in
@@ -213,39 +239,25 @@ during Prep Week.
 
 \newpage
 
-\textbf{University Policies}
+\section{University Policies}
 
-\vspace{0.1in}
+\subsection{Free Expression}
 
-\textbf{Free expression}: Iowa State University supports and upholds the First Amendment protection of freedom of speech and the principle of academic freedom in order to foster a learning environment where open inquiry and the vigorous debate of a diversity of ideas are encouraged. Students will not be penalized for the content or viewpoints of their speech as long as student expression in a class context is germane to the subject matter of the class and conveyed in an appropriate manner.
+Iowa State University supports and upholds the First Amendment protection of freedom of speech and the principle of academic freedom in order to foster a learning environment where open inquiry and the vigorous debate of a diversity of ideas are encouraged. Students will not be penalized for the content or viewpoints of their speech as long as student expression in a class context is germane to the subject matter of the class and conveyed in an appropriate manner.
 
 \vspace{0.1in}
 
 No employee, student, applicant, or campus visitor is compelled to disclose their pronouns. Anyone may voluntarily disclose their own pronouns.
 
-\vspace{0.1in}
+\subsection{Other University Statements}
 
-\textbf{Academic dishonesty}: The class will follow Iowa State University's policy on academic misconduct (5.1 in the Student Code of Conduct). Students are responsible for adhering to university policy and the expectations in the course syllabus and on coursework and exams and for following directions given by faculty, instructors, and ISU Test Center regulations related to coursework, assessments, and exams. Anyone suspected of academic misconduct will be reported to the Office of Student Conduct in the Dean of Students Office. Information about academic integrity and the value of completing academic work honestly can be found in the Iowa State University Academic Integrity Tutorial.
-
-\vspace{0.1in}
-
-\textbf{Accessibility statement}: Iowa State University is committed to supporting students with disabilities. Promoting these values entails providing reasonable accommodations where barriers exist to students' full participation in higher education. Students in need of accommodations or who experience accessibility-related barriers to learning should work with Student Accessibility Services (SAS) to identify resources and support available to them. Staff at SAS collaborate with students and campus partners to coordinate accommodations and to further the academic excellence of students with disabilities. Information about SAS is available online at www.sas.dso.iastate.edu, by email at accessibility@iastate.edu, or by phone at 515-294-7220.
-
-\vspace{0.1in}
-
-\textbf{Non-discrimination statement}: Iowa State University does not discriminate on the basis of race, color, age, ethnicity, religion, national origin, pregnancy, sexual orientation, genetic information, sex, marital status, disability, or status as a U.S. Veteran. Inquiries regarding non-discrimination policies may be directed to Office of Equal Opportunity, 2680 Beardshear Hall, 515 Morrill Road, Ames, Iowa 50011, Tel. 515-294-7612, email eooffice@iastate.edu.
-
-\vspace{0.1in}
-
-\textbf{Mental health and well-being resources}: We're committed to your success and wellbeing at Iowa State. As a Cyclone, you can access 24/7 resources, services, and people dedicated to helping you achieve your goals and be your best in and out of the classroom. Whether you need academic support or just someone to talk to, we're here for you at Cyclone Support (cyclonesupport.iastate.edu). If you are struggling emotionally and need support, there's confidential help available 24/7/365. You can call or text 988 or use the chat at 988lifeline.org.
-
-\vspace{0.1in}
-
-\textbf{Statement on prep week}: This class follows the Iowa State University Prep Week policy, as noted in the ISU Policy Library and the Senior Vice President and Provost's website.
-
-\vspace{0.1in}
-
-\textbf{Religious accommodation}: Iowa State University welcomes a broad spectrum of religious beliefs and practices, recognizing the contributions differing experiences and viewpoints can bring to the community. There may be times when an academic requirement conflicts with religious observances and practices. If that happens, students may request the reasonable accommodation for religious practices. In all cases, you must put your request in writing. The instructor will review the situation in an effort to provide a reasonable accommodation when possible to do so without fundamentally altering a course. For students, you should first discuss the conflict and your requested accommodation with your professor at the earliest possible time. You or your instructor may also seek assistance from the Dean of Students Office at 515-294-1020 or the Office of Equal Opportunity at 515-294-7612.
+Iowa State maintains a set of recommended
+syllabus statements covering academic dishonesty, accessibility, non-discrimination,
+mental health and well-being resources, Prep Week, and religious accommodation.  These
+apply to this course, and you should read them.  They are kept current on
+\href{https://celt.iastate.edu/prepare-and-teach/design-your-course/syllabus-statements/}%
+{CELT's syllabus statements page}
+(celt.iastate.edu/prepare-and-teach/design-your-course/syllabus-statements).
 
 \end{raggedright}
 

@@ -23,3 +23,6 @@
 # Bulky course material: synced via Dropbox, symlinked in by scripts/link-dropbox-pdfs.sh
 math3850/stinga
 math3850/herzog_f25
+
+# Personal scheduling: contains family routines, not for a public repo
+math3850/nguyen_f26/SCHEDULE.md
